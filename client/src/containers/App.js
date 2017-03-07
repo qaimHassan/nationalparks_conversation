@@ -3,6 +3,9 @@ import Conversation from '../services/conversation';
 import ParkCard from '../components/ParkCard';
 import AnimalsCard from '../components/AnimalsCard';
 import PlantsCard from '../components/PlantsCard';
+import ActivitiesCard from '../components/ActivitiesCard';
+import AttractionsCard from '../components/AttractionsCard';
+import ContactsCard from '../components/ContactsCard';
 import WeatherCard from '../components/WeatherCard';
 import './App.css';
 
@@ -57,6 +60,24 @@ class App extends Component {
           <div key={key} className="exchange">
             { exchange.input.text ? <div className="user-msg">{exchange.input.text}</div> : null }
             <div className="watson-msg"><PlantsCard park={exchange.output.park}/></div>
+          </div>);
+      case 'activities':
+        return (
+          <div key={key} className="exchange">
+            { exchange.input.text ? <div className="user-msg">{exchange.input.text}</div> : null }
+            <div className="watson-msg"><ActivitiesCard park={exchange.output.park}/></div>
+          </div>);
+      case 'attractions':
+        return (
+          <div key={key} className="exchange">
+            { exchange.input.text ? <div className="user-msg">{exchange.input.text}</div> : null }
+            <div className="watson-msg"><AttractionsCard park={exchange.output.park}/></div>
+          </div>);
+      case 'contact':
+        return (
+          <div key={key} className="exchange">
+            { exchange.input.text ? <div className="user-msg">{exchange.input.text}</div> : null }
+            <div className="watson-msg"><ContactsCard park={exchange.output.park}/></div>
           </div>);
       case 'weather':
         return (
