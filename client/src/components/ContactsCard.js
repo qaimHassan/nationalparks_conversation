@@ -17,7 +17,7 @@ const ContactsCard = ({
   }) => {
   return (
     <Carousel>
-      {park.flora.map((f, i) => (
+      {park.contact.map((f, i) => (
         <ContactCard key={i} contact={f} />
       ))}
     </Carousel>

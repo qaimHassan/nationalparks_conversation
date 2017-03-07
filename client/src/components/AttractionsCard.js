@@ -21,7 +21,7 @@ const AttractionsCard = ({
   }) => {
   return (
     <Carousel>
-      {park.flora.map((f, i) => (
+      {park.attractions.map((f, i) => (
         <AttractionCard key={i} attraction={f} />
       ))}
     </Carousel>
